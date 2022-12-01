@@ -1,4 +1,4 @@
-module github.com/getlantern/golog
+module github.com/snowtrack/golog
 
 go 1.12
 

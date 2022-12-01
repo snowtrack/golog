@@ -5,7 +5,7 @@ import (
 	"io/ioutil"
 	"testing"
 
-	"github.com/getlantern/golog"
+	"github.com/snowtrack/golog"
 	"github.com/stretchr/testify/assert"
 )
 

@@ -5,7 +5,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/getlantern/golog"
+	"github.com/snowtrack/golog"
 )
 
 // Capture captures logs to the given testing.T's Log function.
@@ -13,12 +13,11 @@ import (
 //
 // Typical usage:
 //
-//    func MyTest(t *testing.T) {
-//        stopCapture := testlog.Capture(t)
-//        defer stopCapture()
-//        // do stuff
-//    }
-//
+//	func MyTest(t *testing.T) {
+//	    stopCapture := testlog.Capture(t)
+//	    defer stopCapture()
+//	    // do stuff
+//	}
 func Capture(t *testing.T) func() {
 	w := &testLogWriter{T: t}
 	reset := golog.SetOutputs(w, w)
